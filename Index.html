@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レトロタイプライター風キーボード</title>
+    <style>
+        body {
+            font-family: "Courier New", monospace;
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+        }
+        #input-field {
+            width: 80%;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            background: #333;
+            color: white;
+            border: 2px solid white;
+        }
+        #conversion-window {
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #333;
+            border: 2px solid #fff;
+            text-align: left;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+        .keyboard-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .left-keyboard, .right-keyboard {
+            display: flex;
+            flex-wrap: wrap;
+            width: 250px;
+            padding: 10px;
+            border: 2px solid #fff;
+            background: #444;
+            border-radius: 10px;
+        }
+        .right-keyboard {
+            transform: rotate(45deg);
+        }
+        .key {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            background: #666;
+            cursor: pointer;
+            user-select: none;
+        }
+        .key:active {
+            background: #888;
+        }
+        .conversion-item {
+            padding: 5px;
+            cursor: pointer;
+        }
+        .conversion-item:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>レトロタイプライター風キーボード</h1>
+    <input type="text" id="input-field" readonly>
+
+    <div id="conversion-window">
+        <ul id="conversion-list"></ul>
+    </div>
+
+    <div class="keyboard-container">
+        <div class="left-keyboard">
+            <div class="key" onclick="typeKey('Q')">Q</div>
+            <div class="key" onclick="typeKey('W')">W</div>
+            <div class="key" onclick="typeKey('E')">E</div>
+            <div class="key" onclick="typeKey('R')">R</div>
+            <div class="key" onclick="typeKey('T')">T</div>
+            <div class="key" onclick="typeKey('A')">A</div>
+            <div class="key" onclick="typeKey('S')">S</div>
+            <div class="key" onclick="typeKey('D')">D</div>
+            <div class="key" onclick="typeKey('F')">F</div>
